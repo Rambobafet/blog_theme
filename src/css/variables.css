@@ -1,0 +1,9 @@
+:root {
+    --space-xs: 0.4rem;
+    --space-s: 0.8rem;
+    --space-m: 1.2rem;
+    --space-l: 2rem;
+    --space-xl: 3.2rem;
+
+    --links: #1976d2;
+}

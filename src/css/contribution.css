@@ -1,0 +1,53 @@
+/* h1 forbidden : it's already the post title */
+.content__body h2,
+.content__body h3,
+.content__body h4,
+.content__body h5,
+.content__body h6 {
+    font-weight: bold;
+}
+
+.content__body h2 {
+    font-size: 3rem;
+    line-height: 3;
+}
+
+.content__body h3 {
+    font-size: 2.5rem;
+    line-height: 2.5;
+}
+
+.content__body h4 {
+    font-size: 2.2rem;
+    line-height: 2.2;
+}
+
+.content__body h5 {
+    font-size: 2rem;
+    line-height: 2;
+}
+
+.content__body h6 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.content__body p {
+    margin-bottom: var(--space-s);
+}
+
+.content__body a {
+    color: var(--links);
+    text-decoration: none;
+    border-bottom: 1px solid var(--links);
+}
+
+.content__body a:hover,
+.content__body a:focus {
+    border-style: dotted;
+}
+
+.content__body a:visited {
+    color: purple;
+    border-bottom: 1px solid purple;
+}
