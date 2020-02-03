@@ -37,9 +37,9 @@
 }
 
 .content__body a {
-    color: var(--links);
+    color: var(--color-link);
     text-decoration: none;
-    border-bottom: 1px solid var(--links);
+    border-bottom: 1px solid var(--color-link);
 }
 
 .content__body a:hover,
@@ -48,6 +48,6 @@
 }
 
 .content__body a:visited {
-    color: purple;
-    border-bottom: 1px solid purple;
+    color: var(--color-visited);
+    border-bottom: 1px solid var(--color-visited);
 }

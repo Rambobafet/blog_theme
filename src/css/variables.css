@@ -5,7 +5,11 @@
     --space-l: 2rem;
     --space-xl: 3.2rem;
 
-    --links: #1976d2;
+    /*https://clrs.cc/*/
+    --color-text: #111;
+    --color-link: #0074D9;
+    --color-main: #FF851B;
+    --color-visited: #85144b;
 
     --bp-desktop: 1200px;
 }

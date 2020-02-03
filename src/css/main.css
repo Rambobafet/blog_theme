@@ -1,11 +1,23 @@
 body {
     background-color: #fcfcfc;
+    color: var(--color-text);
 
     --headerHeight: 80px;
 }
 
 s {
     text-decoration: none;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-link);
+}
+
+a:visited {
+    color: var(--color-visited);
+    border-bottom: 1px solid var(--color-visited);
 }
 
 .skipLink {
@@ -265,9 +277,22 @@ s {
 
 .content__title {
     font-size: 3.5rem;
+    width: auto;
     display: inline-block;
-    background: white;
     font-weight: bold;
+    position: relative;
+}
+
+.content__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 8px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    bottom: 14px;
+    background: var(--color-main);
 }
 
 .metadata {
@@ -283,16 +308,17 @@ s {
 
 .taxonomy__link {
     text-decoration: none;
-    color: #000;
+    color: var(--color-text);
     border-radius: 999em;
-    padding: var(--space-xs) var(--space-s);
-    border: 1px solid #e7e7e7;
+    padding: var(--space-s) var(--space-m);
+    border: 1px solid var(--color-main);
     background: white;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .12);
 }
 
 .taxonomy__link:focus,
 .taxonomy__link:hover {
-    background: var(--links);
+    background: var(--color-main);
 }
 
 .content__related {
