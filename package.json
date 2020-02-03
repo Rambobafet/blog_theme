@@ -1,0 +1,10 @@
+{
+  "name": "blog_theme",
+  "version": "1",
+  "description": "Theme for Bobu's Hugo blog",
+  "main": "index.js",
+  "repository": "git@github.com:Rambobafet/blog_theme.git",
+  "author": "Sébastien Picq <sebastien.picq@ekino.com>",
+  "license": "MIT",
+  "private": false
+}

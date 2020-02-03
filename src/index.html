@@ -14,44 +14,51 @@
 <div class="blog">
     <div class="globalNavigation">
         <header role="banner" class="mainHeader">
+            <button id="toggleNavigation" class="mainNavigation__toggle" aria-controls="main-navigation"
+                    aria-expanded="false">
+                <span class="a11y-hidden">Ouvrir le menu</span>
+                <span class="mainNavigation__toggleLine" role="presentation"></span>
+            </button>
+
             <div class="identity">
+                <div class="identity__logo">
+                    <img class="identity__img" src="assets/bobu.jpg" alt="" />
+                </div>
                 <p class="identity__name">Le blog du Bobu</p>
-                <p class="identity__baseline">Themed by Bobu</p>
             </div>
-
-            <nav class="mainNavigation" role="navigation" id="main-navigation" aria-label="navigation principale">
-                <button id="toggleNavigation" class="mainNavigation__toggle" aria-controls="main-navigation" aria-expanded="false">
-                    <span class="a11y-hidden">Ouvrir le menu</span>
-                    <span class="mainNavigation__toggleLine" role="presentation"></span>
-                </button>
-
+        </header>
+        <div class="mainNavigation" id="mainNavigationPanel" aria-hidden="true">
+            <nav class="mainNavigation__nav" role="navigation" id="main-navigation" aria-label="navigation principale">
                 <ul class="mainNavigation__list">
                     <li class="mainNavigation__listItem">
                         <a class="mainNavigation__link" href="#">Link</a>
                     </li>
-                </ul>
-            </nav>
-        </header>
-
-        <footer role="contentinfo" class="mainFooter">
-            <p>Hugo theme by Bobu</p>
-            <p>Inspired from Makito's journal</p>
-            <p>Copyright Bobu 2020</p>
-
-            <nav class="socials" id="socials" aria-label="réseaux sociaux">
-                <ul>
-                    <li>
-                        <a href="#">Git</a>
+                    <li class="mainNavigation__listItem">
+                        <a class="mainNavigation__link" href="#">Link 2</a>
                     </li>
                 </ul>
             </nav>
-        </footer>
+
+            <footer role="contentinfo" class="mainFooter">
+                <p>Inspired from Makito's journal</p>
+
+                <nav class="socials" id="socials" aria-label="réseaux sociaux">
+                    <ul>
+                        <li>
+                            <a href="#">Git</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
     </div>
     <main tabindex="0" id="main" class="content">
         <header class="content__header">
             <h1 class="content__title">Chapter 1: The grand hall</h1>
             <p class="metadata">
-                Publié le <s><time class="metadata__date">12 avril 2020</time></s> (dernière modification le <time class="metadata__date">13 avril 2020</time>), par <span class="metadata__author">Bobu</span>
+                Publié le <s>
+                <time class="metadata__date">12 avril 2020</time>
+            </s> (dernière modification le&nbsp;<time class="metadata__date">13&nbsp;avril&nbsp;2020</time>), par <span class="metadata__author">Bobu</span>
             </p>
 
             <aside>
@@ -68,31 +75,68 @@
         <div class="content__body">
             <h2>Subtitle</h2>
 
-            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.</p>
-            <p>The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early morning. It was neither an assault by the Picards nor the Burgundians, nor a hunt led along in procession, nor a revolt of scholars in the town of Laas, nor an entry of “our much dread lord, monsieur the king,” nor even a pretty hanging of male and female thieves by the courts of Paris. Neither was it the arrival, so frequent in the fifteenth century, of some plumed and bedizened embassy. It was barely two days since the last cavalcade of that nature, that of the Flemish ambassadors charged with concluding the marriage between the dauphin and Marguerite of Flanders, had made its entry into Paris, to the great annoyance of M. le Cardinal de Bourbon, who, for the sake of pleasing the king, had been obliged to assume an amiable mien towards this whole rustic rabble of Flemish burgomasters, and to regale them at his Hôtel de Bourbon, with a very “pretty morality, allegorical satire, and farce,” while a driving rain drenched the magnificent tapestries at his door.</p>
+            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the
+                sound of all the bells in the triple circuit of the city, the university, and the town ringing a full
+                peal.</p>
+            <p>The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was
+                nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early
+                morning. It was neither an assault by the Picards nor the Burgundians, nor a hunt led along in
+                procession, nor a revolt of scholars in the town of Laas, nor an entry of “our much dread lord, monsieur
+                the king,” nor even a pretty hanging of male and female thieves by the courts of Paris. Neither was it
+                the arrival, so frequent in the fifteenth century, of some plumed and bedizened embassy. It was barely
+                two days since the last cavalcade of that nature, that of the Flemish ambassadors charged with
+                concluding the marriage between the dauphin and Marguerite of Flanders, had made its entry into Paris,
+                to the great annoyance of M. le Cardinal de Bourbon, who, for the sake of pleasing the king, had been
+                obliged to assume an amiable mien towards this whole rustic rabble of Flemish burgomasters, and to
+                regale them at his Hôtel de Bourbon, with a very “pretty morality, allegorical satire, and farce,” while
+                a driving rain drenched the magnificent tapestries at his door.</p>
 
             <h3>heading 3</h3>
-            <p>The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early morning. It was neither an assault by the Picards nor the Burgundians, nor a hunt led along in procession, nor a revolt of scholars in the town of Laas, nor an entry of “our much dread lord, monsieur the king,” nor even a pretty hanging of male and female thieves by the courts of Paris. Neither was it the arrival, so frequent in the fifteenth century, of some plumed and bedizened embassy. It was barely two days since the last cavalcade of that nature, that of the Flemish ambassadors charged with concluding the marriage between the dauphin and Marguerite of Flanders, had made its entry into Paris, to the great annoyance of M. le Cardinal de Bourbon, who, for the sake of pleasing the king, had been obliged to assume an amiable mien towards this whole rustic rabble of Flemish burgomasters, and to regale them at his Hôtel de Bourbon, with a very “pretty morality, allegorical satire, and farce,” while a driving rain drenched the magnificent tapestries at his door.</p>
+            <p>The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was
+                nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early
+                morning. It was neither an assault by the Picards nor the Burgundians, nor a hunt led along in
+                procession, nor a revolt of scholars in the town of Laas, nor an entry of “our much dread lord, monsieur
+                the king,” nor even a pretty hanging of male and female thieves by the courts of Paris. Neither was it
+                the arrival, so frequent in the fifteenth century, of some plumed and bedizened embassy. It was barely
+                two days since the last cavalcade of that nature, that of the Flemish ambassadors charged with
+                concluding the marriage between the dauphin and Marguerite of Flanders, had made its entry into Paris,
+                to the great annoyance of M. le Cardinal de Bourbon, who, for the sake of pleasing the king, had been
+                obliged to assume an amiable mien towards this whole rustic rabble of Flemish burgomasters, and to
+                regale them at his Hôtel de Bourbon, with a very “pretty morality, allegorical satire, and farce,” while
+                a driving rain drenched the magnificent tapestries at his door.</p>
             <h4>heading 4</h4>
-            <p>Three hundred and <a href="#">forty-eight years</a>, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.</p>
+            <p>Three hundred and <a href="#">forty-eight years</a>, six months, and nineteen days ago to-day, the
+                Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the
+                town ringing a full peal.</p>
             <h5>heading 5</h5>
-            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.</p>
+            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the
+                sound of all the bells in the triple circuit of the city, the university, and the town ringing a full
+                peal.</p>
             <h6>heading 6</h6>
-            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.</p>
+            <p>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the
+                sound of all the bells in the triple circuit of the city, the university, and the town ringing a full
+                peal.</p>
         </div>
 
-        <footer>
+        <aside class="content__related">
+            <h2 class="">Voir d'autres articles</h2>
+
             <nav class="postNavigation" id="post-navigation" aria-label="navigation de publication">
-                <ul class="postNavigation__list">
-                    <li class="postNavigation__listItem">
-                        <a class="postNavigation__link" href="#prev">Précédent</a>
-                    </li>
-                    <li class="postNavigation__listItem">
-                        <a class="postNavigation__link" href="#next">Suivant</a>
-                    </li>
-                </ul>
+                <article class="postNavigation__article">
+                    <img src="https://via.placeholder.com/100x75" alt="" class="postNavigation__thumbnail"/>
+                    <h1 class="postNavigation__title">
+                        <a class="postNavigation__link" href="#prev">Mon article d'avant avec un long titre mais c'est pour la bonne cause</a>
+                    </h1>
+                </article>
+
+                <article class="postNavigation__article">
+                    <img src="https://via.placeholder.com/100x75" alt="" class="postNavigation__thumbnail"/>
+                    <h1 class="postNavigation__title">
+                        <a class="postNavigation__link" href="#next">Mon article d'après</a>
+                    </h1>
+                </article>
             </nav>
-        </footer>
+        </aside>
 
     </main>
 </div>
