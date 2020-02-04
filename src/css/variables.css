@@ -1,15 +1,15 @@
 :root {
-    --space-xs: 0.4rem;
-    --space-s: 0.8rem;
-    --space-m: 1.2rem;
-    --space-l: 2rem;
-    --space-xl: 3.2rem;
+  --space-xs: 0.4rem;
+  --space-s: 0.8rem;
+  --space-m: 1.2rem;
+  --space-l: 2rem;
+  --space-xl: 3.2rem;
 
-    /*https://clrs.cc/*/
-    --color-text: #111;
-    --color-link: #0074D9;
-    --color-main: #FF851B;
-    --color-visited: #85144b;
+  /*https://clrs.cc/*/
+  --color-text: #111;
+  --color-link: #0074d9;
+  --color-main: #ff851b;
+  --color-visited: #85144b;
 
-    --bp-desktop: 1200px;
+  --bp-desktop: 1200px;
 }

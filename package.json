@@ -1,10 +1,73 @@
 {
   "name": "blog_theme",
+  "engines": {
+    "node": ">=10 >=12",
+    "yarn": ">=1.21"
+  },
   "version": "1",
   "description": "Theme for Bobu's Hugo blog",
   "main": "index.js",
   "repository": "git@github.com:Rambobafet/blog_theme.git",
   "author": "Sébastien Picq <sebastien.picq@ekino.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "IE 9",
+    "not IE_Mob 11"
+  ],
+  "scripts": {
+    "lint": "eslint ./src --ext .js",
+    "lint-fix": "yarn lint --fix --quiet",
+    "prettier-fix": "yarn prettier --write",
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "stylelint-fix": "yarn stylelint --fix",
+    "postcss-fix": "postcss --config ./postcss.config.js --replace",
+    "build": "webpack"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "yarn prettier-fix",
+      "yarn lint-fix"
+    ],
+    "src/**/*.css": [
+      "yarn postcss-fix",
+      "yarn stylelint-fix"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-sorting": "^5.0.1",
+    "prettier": "1.19.1",
+    "style-loader": "^1.1.3",
+    "stylelint": "^13.0.0",
+    "stylelint-a11y": "^1.2.2",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-prettier": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^6.7.0"
+  }
 }
